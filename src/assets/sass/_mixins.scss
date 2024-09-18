@@ -1,0 +1,10 @@
+@mixin global-btn() {
+    background-color: $primary-color;
+            color: $color-neutral-dark;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.4s;
+            &:hover {
+                background-color: $primary-darkened;
+            }
+}

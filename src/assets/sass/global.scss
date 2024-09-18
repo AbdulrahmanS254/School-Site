@@ -1,15 +1,24 @@
 html {
     box-sizing: border-box;
-    font-size: 62.5% /* makes 1rem 10px */
 }
 
-*, *::before , *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a, a:active, a:hover, a:focus {
+a,
+a:active,
+a:hover,
+a:focus {
     text-decoration: none;
 }
 
+body {
+    font-family: "changa", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: $body-bg;
+    color: $color-neutral-dark;
+}
