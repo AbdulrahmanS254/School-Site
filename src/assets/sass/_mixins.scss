@@ -4,7 +4,9 @@
             font-size: 1.2rem;
             font-weight: 600;
             transition: all 0.4s;
+            border-radius: 0;
             &:hover {
-                background-color: $primary-darkened;
+                color: $color-neutral-dark;
+                background-color: $primary-darkened !important;
             }
 }

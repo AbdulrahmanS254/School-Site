@@ -22,3 +22,7 @@ body {
     background-color: $body-bg;
     color: $color-neutral-dark;
 }
+
+.custom-btn {
+    @include global-btn();
+}

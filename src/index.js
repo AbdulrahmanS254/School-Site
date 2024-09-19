@@ -1,14 +1,23 @@
 import * as bootstrap from "bootstrap";
+import "@fortawesome/fontawesome-free/js/all.js";
 import "./assets/sass/style.scss";
 
+// Changing the navbar background when scrolling
 const navbar = document.getElementById("navbar");
-
-// Add an event listener for the scroll event
 window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-        // Adjust scrollY value to when you want the color change
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
+    }
+});
+
+// changing the background when the button is clicked
+const navButton = document.getElementById("nav-btn")
+navButton.addEventListener("click", () => {
+    if (navButton.classList.contains('collapsed')) {
+        navbar.classList.remove('bg-change');
+    } else {
+        navbar.classList.add('bg-change');
     }
 });
