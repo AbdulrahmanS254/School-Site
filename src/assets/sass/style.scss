@@ -158,7 +158,7 @@ section {
                 rgba($coffee , 0.23) 0px 3px 6px;
             color: $black;
             .card-icon {
-                color: $coffee !important;
+                color: $brown !important;
             }
 
             &-title {
@@ -186,29 +186,8 @@ section {
         background-color: $light-coffee;
     }
 }
-// Swiper styles
-// .swiper {
-//     width: 100%;
-//     height: 500px;
-//     padding-bottom: 50px;
-//     overflow: hidden;
-// }
 
-// .swiper-wrapper {
-//     display: flex;
-//     align-items: center;
-
-// }
-
-// .swiper-slide {
-//     width: 50%;
-// }
-
-// .swiper-slide img {
-//     display: block;
-//     height: 100%;
-// }
-
+// Horizontal parallex slider styles
 .slideStyle {
     position: relative;
     display: flex;
@@ -277,7 +256,7 @@ section {
         display: flex;
         grid-column-gap: 0.5rem;
         grid-row-gap: 0.5rem;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         opacity: 0;
@@ -287,9 +266,13 @@ section {
             opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1);
         .heading-medium {
             text-transform: uppercase;
-            font-size: 1.5rem;
+            font-size: 1.325rem;
             font-weight: bold;
             line-height: 1;
+        }
+        .heading-small {
+            font-size: 1.1rem;
+            font-weight: 500;
         }
     }
 }
@@ -334,6 +317,14 @@ section {
     }
 
     section {
+
+        .section-heading {
+            font-size: 2.5rem;
+            text-align: center;
+            &::after {
+                right: calc(50% - 5%);
+            }
+        }
         &.activities {
             .col-md-6 {
                 justify-content: center !important;
@@ -343,6 +334,18 @@ section {
             }
         }
     }
+
+    .swiperParallax {
+        .gallery-info__wrapper {
+            .heading-medium {
+                font-size: 1rem;
+            }
+            .heading-small {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
 }
 
 @media (max-width: 576px) {
