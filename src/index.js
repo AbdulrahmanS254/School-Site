@@ -25,23 +25,6 @@ navButton.addEventListener("click", () => {
 });
 
 // Students swiper
-// const swiper = new Swiper(".swiper", {
-//     // Optional parameters
-//     direction: "horizontal",
-//     loop: true,
-
-//     // If we need pagination
-//     pagination: {
-//         el: ".swiper-pagination",
-//     },
-
-//     // Navigation arrows
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-// });
-
 const gallerySlider = new Swiper(".swiper.is-gallery", {
     loop: true,
     slidesPerView: 2,
@@ -51,13 +34,6 @@ const gallerySlider = new Swiper(".swiper.is-gallery", {
     parallax: true,
 });
 
-// Dark and Light Style
-const control = document.getElementById("direction-toggle");
-const wrapper = document.querySelector(".slideStyle");
-const footer = document.querySelector(".footer");
-
-control.addEventListener("click", () => {
-    control.classList.toggle("darkStyle");
-    wrapper.classList.toggle("darkStyle");
-    footer.classList.toggle("darkStyle");
-});
+// footer copy-right year
+let date = new Date().getFullYear();
+document.getElementById('year').innerHTML = date;

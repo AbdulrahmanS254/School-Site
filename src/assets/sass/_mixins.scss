@@ -6,7 +6,7 @@
             transition: all 0.4s;
             border-radius: 0;
             &:hover {
-                color: $dark-neutral;
+                color: $dark-neutral !important;
                 background-color: $primary-darkened !important;
             }
 }
