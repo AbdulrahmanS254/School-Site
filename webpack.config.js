@@ -84,6 +84,11 @@ module.exports = {
             template: "./src/student-1.html",
             inject: "body",
         }),
+        new HtmlWebpackPlugin({
+            filename: "student-2.html",
+            template: "./src/student-2.html",
+            inject: "body",
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "assets/css/[name].css",

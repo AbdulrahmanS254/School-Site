@@ -36,4 +36,22 @@ const gallerySlider = new Swiper(".swiper.is-gallery", {
 
 // footer copy-right year
 let date = new Date().getFullYear();
-document.getElementById('year').innerHTML = date;
+document.getElementById("year").innerHTML = date;
+
+// دالة لحساب المعدل النهائي لكل صف
+function calculateFinalGradeForRow(rowClass, finalGradeId) {
+    const grades = document.querySelectorAll(rowClass);
+    let total = 0;
+
+    grades.forEach((grade) => {
+        total += parseInt(grade.textContent); // جمع الدرجات
+    });
+
+    const average = total / grades.length; // حساب المعدل
+    document.getElementById(finalGradeId).textContent = average.toFixed(2); // طباعة المعدل في الجدول
+}
+
+// حساب وطباعة المعدل النهائي لكل عمود
+calculateFinalGradeForRow(".grade-1", "final-grade-1");
+calculateFinalGradeForRow(".grade-2", "final-grade-2");
+calculateFinalGradeForRow(".grade-3", "final-grade-3");
