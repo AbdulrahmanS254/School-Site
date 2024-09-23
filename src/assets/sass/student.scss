@@ -54,8 +54,9 @@ section {
             border-radius: 10px;
             .line {
                 margin: 20px 15px;
-                
-                h4, p {
+
+                h4,
+                p {
                     display: inline-block;
                     margin-bottom: 10px;
                 }
@@ -72,17 +73,47 @@ section {
     }
 
     &.marks {
-        .table>:not(caption)>*>* {
+        background-color: $light-coffee;
+        .table > :not(caption) > * > * {
             background-color: #fff;
-            border-radius: 15px;
-            border-bottom: 0;
-            text-align: center;
         }
         #final-grade {
-            &-1, &-2, &-3 {
+            &-1,
+            &-2,
+            &-3 {
                 color: $color-primary;
                 font-weight: 600;
                 font-size: 1.1rem;
+            }
+        }
+    }
+
+    &.advices {
+        background:
+            linear-gradient(rgba($dark-neutral, 0.65), rgba($dark-neutral, 0.65)),
+            url("../images/background-student.jpg") center no-repeat;
+        background-size: cover;
+        .section-heading {
+            text-align: center;
+            color: #fff;
+            text-shadow: 1px 1px 5px rgba($dark-neutral, 0.7);
+            &::after {
+                right: calc(50% - 5%);
+                background-color: #fff;
+            }
+        }
+        .col-lg-3 {
+            margin-bottom: 50px;
+        }
+        .card {
+            color: #fff;
+            height: 50%;
+            width: 100%;
+            padding: 10px 10px;
+            background-color: transparent;
+            border: 0;
+            .card-title {
+                height: 50px !important;
             }
         }
     }

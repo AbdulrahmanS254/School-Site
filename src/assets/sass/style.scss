@@ -150,6 +150,7 @@ section {
         }
         .card {
             width: 70%;
+            height: 330px;
             background-color: transparent;
             border: 1px solid $coffee;
             padding: 15px 10px 20px;
@@ -418,6 +419,16 @@ footer {
             }
         }
     }
+
+    section {
+        &.activities {
+            .card {
+                width: 90%;
+                min-height: 340px;
+                padding: 10px 0px 15px;
+            }
+        }
+    }
 }
 
 @media (max-width: 1000px) {
@@ -482,4 +493,3 @@ footer {
     }
 
 }
-
