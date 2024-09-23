@@ -39,16 +39,22 @@ const gallerySlider = new Swiper(".swiper.is-gallery", {
 let date = new Date().getFullYear();
 document.getElementById("year").innerHTML = date;
 
+
 // دالة لحساب المعدل النهائي لكل صف
 function calculateFinalGradeForRow(rowClass, finalGradeId) {
     const grades = document.querySelectorAll(rowClass);
     let total = 0;
+    let count = 0;
 
     grades.forEach((grade) => {
-        total += parseInt(grade.textContent); // جمع الدرجات
+        const value = parseFloat(grade.textContent); // تحويل الدرجة إلى رقم عشري
+        if (!isNaN(value)) { // تأكد من أن القيمة رقم وليس NaN
+            total += value; // جمع الدرجات
+            count++; // زيادة عدد الدرجات الصحيحة
+        }
     });
 
-    const average = total / grades.length; // حساب المعدل
+    const average = count > 0 ? (total / count) : 0; // حساب المعدل إذا كانت هناك درجات
     document.getElementById(finalGradeId).textContent = average.toFixed(2); // طباعة المعدل في الجدول
 }
 
