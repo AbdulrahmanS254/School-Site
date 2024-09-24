@@ -63,10 +63,19 @@ section {
                 h4 {
                     font-size: 1.5rem;
                     font-weight: 600;
+                    &.about-student-title {
+                        font-size: 1.6rem;
+                        color: $black;
+                        padding-bottom: 5px;
+                        border-bottom: 2px solid $dark-neutral;
+                    }
                 }
                 p {
                     font-size: 1.3rem;
                     font-weight: 500;
+                    &.about-text {
+                        text-align: justify;
+                    }
                 }
             }
         }
