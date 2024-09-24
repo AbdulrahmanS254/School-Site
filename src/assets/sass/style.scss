@@ -143,18 +143,14 @@ section {
         .col-md-6 {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            &:nth-of-type(2),
-            &:nth-of-type(4) {
-                justify-content: flex-end;
-            }
         }
         .card {
-            width: 70%;
-            height: 330px;
-            background-color: transparent;
-            border: 1px solid $coffee;
-            padding: 15px 10px 20px;
+            width: 100%;
+            min-height: 280px;
+            background-color: #fff;
+            border: 0px;
+            border-radius: 0;
+            padding: 20px 10px 15px;
             margin-bottom: 50px;
             text-align: center;
             box-shadow:
@@ -442,6 +438,17 @@ footer {
             }
         }
     }
+
+    section {
+        &.activities {
+            .card {
+                &-title {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
     footer {
         .social {
             text-align: center;
@@ -477,7 +484,7 @@ footer {
                 justify-content: center !important;
             }
             .card {
-                width: 80%;
+                min-height: 250px;
             }
         }
     }

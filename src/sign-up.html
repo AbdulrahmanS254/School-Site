@@ -48,41 +48,39 @@
         </nav>
     </header>
 
-    <main>
-        <div class="container py-5">
-            <div class="row d-flex align-items-center justify-content-center vh-100 mt-5">
-                <div class="col-md-6 col-lg-7 col-xl-6 offset-xl-1">
+    <main id="sign">
+        <div class="container py-5 vh-100">
+            <div class="row d-flex align-items-center justify-content-center h-100 mt-5">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                    <img src="./assets/images/Password.png" alt="login" class="img-fluid">
+                </div>
+                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                     <form action="login.html">
-                        <div class="row">
-                            <div class="mb-4 col-md-6">
-                                <label for="name" class="form-label">الاسم</label>
-                                <input type="name" id="name" class="form-control form-control-lg" required>
-                            </div>
-                            <div class="mb-4 col-md-6">
-                                <label for="dob" class="form-label">تاريخ الميلاد</label>
-                                <input type="date" class="form-control form-control-lg" id="dob">
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="form-label">البريد الإلكتروني</label>
-                                <input type="email" id="email" class="form-control form-control-lg" required>
-                            </div>
-                            <div class="mb-4 col-md-6">
-                                <label for="password" class="form-label">كلمة المرور</label>
-                                <input type="password" id="password" class="form-control form-control-lg" required>
-                            </div>
-                            <div class="mb-4 col-md-6">
-                                <label for="password" class="form-label">تأكيد كلمة المرور</label>
-                                <input type="password" id="password-confirmation" class="form-control form-control-lg" required>
-                            </div>
-                            <div class="form-check mb-4">
-                                <label for="remember" class="form-check-label">تذكرني</label>
-                                <input type="checkbox" name="remember" id="remember" class="form-check-input">
-                            </div>
-                            <button type="submit" class="btn custom-btn">سجل الدخول</button>
+                        <div class="mb-4">
+                            <label for="username" class="form-label">اسم المستخدم</label>
+                            <input type="text" id="username" class="form-control form-control-lg" required>
                         </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">البريد الإلكتروني</label>
+                            <input type="email" id="email" class="form-control form-control-lg" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label">كلمة المرور</label>
+                            <input type="password" id="password" class="form-control form-control-lg" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="confirmpassword" class="form-label">تأكيد كلمة المرور</label>
+                            <input type="password" id="confirmpassword" class="form-control form-control-lg" required>
+                        </div>
+                        <button type="submit" class="btn custom-btn">تسجيل حساب</button>
                     </form>
+                    <div class="d-flex mt-4">
+                        <p class="mb-0">في حال كنت تمتلك حساب يمكنك</p>
+                        <a href="./sign-in.html" class="create-new ms-3">تسجيل الدخول</a>
+                    </div>
                 </div>
             </div>
+            <hr>
         </div>
     </main>
 
