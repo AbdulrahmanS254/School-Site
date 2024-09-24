@@ -39,7 +39,6 @@ const gallerySlider = new Swiper(".swiper.is-gallery", {
 let date = new Date().getFullYear();
 document.getElementById("year").innerHTML = date;
 
-
 // دالة لحساب المعدل النهائي لكل صف
 function calculateFinalGradeForRow(rowClass, finalGradeId) {
     const grades = document.querySelectorAll(rowClass);
@@ -48,13 +47,14 @@ function calculateFinalGradeForRow(rowClass, finalGradeId) {
 
     grades.forEach((grade) => {
         const value = parseFloat(grade.textContent); // تحويل الدرجة إلى رقم عشري
-        if (!isNaN(value)) { // تأكد من أن القيمة رقم وليس NaN
+        if (!isNaN(value)) {
+            // تأكد من أن القيمة رقم وليس NaN
             total += value; // جمع الدرجات
             count++; // زيادة عدد الدرجات الصحيحة
         }
     });
 
-    const average = count > 0 ? (total / count) : 0; // حساب المعدل إذا كانت هناك درجات
+    const average = count > 0 ? total / count : 0; // حساب المعدل إذا كانت هناك درجات
     document.getElementById(finalGradeId).textContent = average.toFixed(2); // طباعة المعدل في الجدول
 }
 
