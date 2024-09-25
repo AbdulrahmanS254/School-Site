@@ -1,22 +1,10 @@
 header {
     section.header-section {
         .header-photo {
-            height: 70vh;
-            background: linear-gradient(rgba($dark-neutral, 0.7), rgba($dark-neutral, 0.6)),
-                url("../images/background.webp");
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.41);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include student-header($dark-neutral, "../images/background.webp");
 
             .user-photo {
-                width: 275px;
-                height: 275px;
-                border: 5px solid $light-coffee;
-                border-radius: 137.5px;
-                overflow: hidden;
+                @include user-photo($light-coffee);
                 img {
                     object-fit: cover;
                     height: 100%;
@@ -49,7 +37,7 @@ header {
 section {
     &.about-student {
         .info {
-            background-color: #fff;
+            background-color: $white;
             padding: 20px 15px;
             border-radius: 10px;
             .line {
@@ -84,7 +72,7 @@ section {
     &.marks {
         background-color: $light-coffee;
         .table > :not(caption) > * > * {
-            background-color: #fff;
+            background-color: $white;
         }
         #final-grade {
             &-1,
@@ -98,24 +86,12 @@ section {
     }
 
     &.advices {
-        background:
-            linear-gradient(rgba($dark-neutral, 0.65), rgba($dark-neutral, 0.65)),
-            url("../images/background-student.webp") center no-repeat;
-        background-size: cover;
-        .section-heading {
-            text-align: center;
-            color: #fff;
-            text-shadow: 1px 1px 5px rgba($dark-neutral, 0.7);
-            &::after {
-                right: calc(50% - 5%);
-                background-color: #fff;
-            }
-        }
+        @include advices($dark-neutral, "../images/background-student.webp", $white);
         .col-lg-3 {
             margin-bottom: 50px;
         }
         .card {
-            color: #fff;
+            color: $white;
             height: 50%;
             width: 100%;
             padding: 10px 10px;

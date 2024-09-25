@@ -1,12 +1,48 @@
 @mixin global-btn() {
     background-color: $primary-color;
-            color: $dark-neutral;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: all 0.4s;
-            border-radius: 0;
-            &:hover {
-                color: $dark-neutral !important;
-                background-color: $primary-darkened !important;
-            }
+    color: $dark-neutral;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.4s;
+    border-radius: 0;
+    &:hover {
+        color: $dark-neutral !important;
+        background-color: $primary-darkened !important;
+    }
+}
+
+// student page mixins
+@mixin student-header($gradiant-color, $bg-image-url) {
+    height: 65vh;
+    background: linear-gradient(rgba($gradiant-color, 0.7), rgba($gradiant-color, 0.6)), url(#{$bg-image-url});
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 4px 12px 3px rgba($black, 0.41);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin user-photo($border-color) {
+    width: 275px;
+    height: 275px;
+    border: 5px solid $border-color;
+    border-radius: 137.5px;
+    overflow: hidden;
+}
+
+@mixin advices($advice-gradient, $bg-image-url, $heading-color) {
+    background:
+        linear-gradient(rgba($advice-gradient, 0.65), rgba($advice-gradient, 0.65)),
+        url(#{$bg-image-url}) center no-repeat;
+    background-size: cover;
+    .section-heading {
+        text-align: center;
+        color: $heading-color;
+        text-shadow: 1px 1px 5px rgba($dark-neutral, 0.7);
+        &::after {
+            right: calc(50% - 5%);
+            background-color: $heading-color;
+        }
+    }
 }

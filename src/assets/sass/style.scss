@@ -8,7 +8,7 @@
 
 header {
     .navbar {
-        background-color: rgba(#fff, 0.5);
+        background-color: rgba($white, 0.5);
         transition:
             background-color 0.3s ease,
             box-shadow 0.3s ease;
@@ -147,7 +147,7 @@ section {
         .card {
             width: 100%;
             min-height: 280px;
-            background-color: #fff;
+            background-color: $white;
             border: 0px;
             border-radius: 0;
             padding: 20px 10px 15px;
@@ -238,7 +238,7 @@ section {
                 height: 50px;
                 border-radius: 0;
                 border: none;
-                background-color: #fff;
+                background-color: $white;
                 margin-bottom: 20px;
                 border-bottom: 3px solid $color-primary;
                 &::placeholder {

@@ -107,7 +107,11 @@ module.exports = {
     ],
 
     optimization: {
+        minimize: true,
         minimizer: [new CssMinimizerPlugin()],
+        splitChunks: {
+            chunks: "all",
+        },
     },
 
     devServer: {
