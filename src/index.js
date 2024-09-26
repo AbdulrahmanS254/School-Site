@@ -1,4 +1,3 @@
-import { $ } from "jquery";
 import * as bootstrap from "bootstrap";
 import "@fortawesome/fontawesome-free/js/all.js";
 import Swiper from "swiper";

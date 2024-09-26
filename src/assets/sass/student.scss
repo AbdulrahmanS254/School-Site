@@ -1,7 +1,7 @@
 header {
     section.header-section {
         .header-photo {
-            @include student-header($dark-neutral, "../images/background.webp");
+            @include student-header($dark-neutral, "../images/background.webp", $light-coffee);
 
             .user-photo {
                 @include user-photo($light-coffee);
@@ -22,11 +22,11 @@ header {
                 flex-direction: column;
             }
 
-            .student-name {
-                color: $light-coffee;
-                text-shadow: 2px 2px 5px rgba($dark-neutral, 0.6);
-                font-size: 3rem;
-            }
+            // .student-name {
+            //     color: $light-coffee;
+            //     text-shadow: 2px 2px 5px rgba($dark-neutral, 0.6);
+            //     font-size: 3rem;
+            // }
             .student-class {
                 color: $black;
             }
@@ -99,6 +99,9 @@ section {
             border: 0;
             .card-title {
                 height: 50px !important;
+            }
+            .advice-caption {
+                font-weight: 500;
             }
         }
     }

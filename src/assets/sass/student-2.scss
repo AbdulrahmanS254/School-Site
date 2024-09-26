@@ -1,0 +1,19 @@
+@import "./style.scss";
+
+header {
+    section.header-section {
+        .header-photo {
+            @include student-header($dark-neutral, "../images/background2.webp", $color-accent);
+
+            .user-photo {
+                @include user-photo($color-accent);
+            }
+        }
+    }
+}
+
+section {
+    &.advices {
+        @include advices($white, "../images/background-student2.webp", $dark-neutral);
+    }
+}

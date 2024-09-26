@@ -7,6 +7,7 @@ const path = require("path");
 module.exports = {
     entry: {
         dist: "./src/index.js",
+        student: "./src/assets/sass/student-2.scss",
     },
 
     output: {
@@ -78,26 +79,31 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "./src/index.html",
+            chunks: ['dist'],
             inject: "body",
         }),
         new HtmlWebpackPlugin({
             filename: "student-1.html",
             template: "./src/student-1.html",
+            chunks: ['dist'],
             inject: "body",
         }),
         new HtmlWebpackPlugin({
             filename: "student-2.html",
             template: "./src/student-2.html",
+            chunks: ['dist', 'student'],
             inject: "body",
         }),
         new HtmlWebpackPlugin({
             filename: "sign-in.html",
             template: "./src/sign-in.html",
+            chunks: ['dist'],
             inject: "body",
         }),
         new HtmlWebpackPlugin({
             filename: "sign-up.html",
             template: "./src/sign-up.html",
+            chunks: ['dist'],
             inject: "body",
         }),
         new CleanWebpackPlugin(),

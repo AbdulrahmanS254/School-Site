@@ -12,7 +12,7 @@
 }
 
 // student page mixins
-@mixin student-header($gradiant-color, $bg-image-url) {
+@mixin student-header($gradiant-color, $bg-image-url, $name-color) {
     height: 65vh;
     background: linear-gradient(rgba($gradiant-color, 0.7), rgba($gradiant-color, 0.6)), url(#{$bg-image-url});
     background-size: cover;
@@ -21,6 +21,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    .student-name {
+        color: $name-color;
+        text-shadow: 2px 2px 5px rgba($dark-neutral, 0.6);
+        font-size: 3rem;
+    }
 }
 
 @mixin user-photo($border-color) {
@@ -44,5 +49,8 @@
             right: calc(50% - 5%);
             background-color: $heading-color;
         }
+    }
+    .card {
+        color: $heading-color;
     }
 }
