@@ -28,6 +28,15 @@ window.addEventListener("scroll", () => {
     }
 });
 
+const home = document.getElementById("home");
+window.addEventListener("scroll", () => {
+    if (window.scrollY == 0) {
+        home.classList.add("active");
+    } else {
+        home.classList.remove("active");
+    }
+});
+
 // changing the background when the button is clicked
 const navButton = document.getElementById("nav-btn");
 navButton.addEventListener("click", () => {
