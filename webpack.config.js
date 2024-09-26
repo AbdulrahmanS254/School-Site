@@ -1,18 +1,19 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const path = require("path");
 
 module.exports = {
     entry: {
         dist: "./src/index.js",
-        student: "./src/assets/sass/student-2.scss",
+        "assets/js/student-2": "./src/assets/js/student-2.js",
     },
 
     output: {
-        path: path.resolve(__dirname, "dist"),
         filename: "[name].js",
+        path: path.resolve(__dirname, "dist"),
         clean: true,
     },
 
@@ -91,7 +92,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "student-2.html",
             template: "./src/student-2.html",
-            chunks: ['dist', 'student'],
+            chunks: ['dist', 'assets/js/student-2'],
             inject: "body",
         }),
         new HtmlWebpackPlugin({
@@ -114,7 +115,10 @@ module.exports = {
 
     optimization: {
         minimize: true,
-        minimizer: [new CssMinimizerPlugin()],
+        minimizer: [
+            new TerserPlugin(),
+            new CssMinimizerPlugin(),
+        ],
         splitChunks: {
             chunks: "all",
         },

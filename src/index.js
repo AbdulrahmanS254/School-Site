@@ -1,9 +1,24 @@
-import * as bootstrap from "bootstrap";
-import "@fortawesome/fontawesome-free/js/all.js";
-import Swiper from "swiper";
-import "swiper/css/bundle";
-import "./assets/sass/style.scss";
+// Import Bootstrap dynamically
+const loadBootstrap = () => import("bootstrap");
 
+// Import Font Awesome dynamically
+const loadFontAwesome = () => import("@fortawesome/fontawesome-free/js/all.js");
+
+// Import main styles dynamically
+const loadStyles = () => import("./assets/sass/style.scss");
+
+// load all dependencies
+const loadDependencies = async () => {
+    await loadBootstrap();
+    await loadFontAwesome();
+    await loadStyles();
+};
+
+// Call the function to load dependencies
+loadDependencies();
+import Swiper from "swiper";
+
+/*  ==============================================================  */
 // Changing the navbar background when scrolling
 const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {

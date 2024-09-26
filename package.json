@@ -37,6 +37,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.14",
+    "terser-webpack-plugin": "^5.3.10"
   }
 }
