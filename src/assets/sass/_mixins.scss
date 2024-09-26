@@ -12,45 +12,49 @@
 }
 
 // student page mixins
-@mixin student-header($gradiant-color, $bg-image-url, $name-color) {
+@mixin student-header($gradient-color, $bg-image-url, $name-color, $important: false) {
     height: 65vh;
-    background: linear-gradient(rgba($gradiant-color, 0.7), rgba($gradiant-color, 0.6)), url(#{$bg-image-url});
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0px 4px 12px 3px rgba($black, 0.41);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(rgba($gradient-color, 0.7), rgba($gradient-color, 0.6)), 
+                url(#{$bg-image-url}) #{if($important, "!important", "")};
+    background-size: cover #{if($important, "!important", "")};
+    background-position: center #{if($important, "!important", "")};
+    box-shadow: 0px 4px 12px 3px rgba($black, 0.41) #{if($important, "!important", "")};
+    display: flex #{if($important, "!important", "")};
+    align-items: center #{if($important, "!important", "")};
+    justify-content: center #{if($important, "!important", "")};
+    
     .student-name {
-        color: $name-color;
-        text-shadow: 2px 2px 5px rgba($dark-neutral, 0.6);
-        font-size: 3rem;
+        color: $name-color #{if($important, "!important", "")};
+        text-shadow: 2px 2px 5px rgba($dark-neutral, 0.6) #{if($important, "!important", "")};
+        font-size: 3rem #{if($important, "!important", "")};
     }
 }
 
-@mixin user-photo($border-color) {
-    width: 275px;
-    height: 275px;
-    border: 5px solid $border-color;
-    border-radius: 137.5px;
-    overflow: hidden;
+@mixin user-photo($border-color, $important: false) {
+    width: 275px #{if($important, "!important", "")};
+    height: 275px #{if($important, "!important", "")};
+    border: 5px solid $border-color #{if($important, "!important", "")};
+    border-radius: 50% #{if($important, "!important", "")};
+    overflow: hidden #{if($important, "!important", "")};
 }
 
-@mixin advices($advice-gradient, $bg-image-url, $heading-color) {
-    background:
-        linear-gradient(rgba($advice-gradient, 0.65), rgba($advice-gradient, 0.65)),
-        url(#{$bg-image-url}) center no-repeat;
-    background-size: cover;
+@mixin advices($advice-gradient, $bg-image-url, $heading-color, $important: false) {
+    background: linear-gradient(rgba($advice-gradient, 0.65), rgba($advice-gradient, 0.65)),
+                url(#{$bg-image-url}) center no-repeat #{if($important, "!important", "")};
+    background-size: cover #{if($important, "!important", "")};
+    
     .section-heading {
-        text-align: center;
-        color: $heading-color;
-        text-shadow: 1px 1px 5px rgba($dark-neutral, 0.7);
+        text-align: center #{if($important, "!important", "")};
+        color: $heading-color #{if($important, "!important", "")};
+        text-shadow: 1px 1px 5px rgba($dark-neutral, 0.7) #{if($important, "!important", "")};
+        
         &::after {
-            right: calc(50% - 5%);
-            background-color: $heading-color;
+            right: calc(50% - 5%) #{if($important, "!important", "")};
+            background-color: $heading-color #{if($important, "!important", "")};
         }
     }
+    
     .card {
-        color: $heading-color;
+        color: $heading-color #{if($important, "!important", "")};
     }
 }

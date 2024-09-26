@@ -1,1 +1,0 @@
-import '../sass/student-2.scss';

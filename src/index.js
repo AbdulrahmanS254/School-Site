@@ -1,8 +1,8 @@
 // Import Bootstrap dynamically
 const loadBootstrap = () => import("bootstrap");
 
-// Import Font Awesome dynamically
-const loadFontAwesome = () => import("@fortawesome/fontawesome-free/js/all.js");
+// fontawesome
+import "@fortawesome/fontawesome-free/js/all.js";
 
 // Import main styles dynamically
 const loadStyles = () => import("./assets/sass/style.scss");
@@ -10,7 +10,6 @@ const loadStyles = () => import("./assets/sass/style.scss");
 // load all dependencies
 const loadDependencies = async () => {
     await loadBootstrap();
-    await loadFontAwesome();
     await loadStyles();
 };
 

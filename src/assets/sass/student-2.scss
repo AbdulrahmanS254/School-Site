@@ -3,10 +3,14 @@
 header {
     section.header-section {
         .header-photo {
-            @include student-header($dark-neutral, "../images/background2.webp", $color-accent);
+            @include student-header(
+                $dark-neutral,
+                "../images/background2.webp",
+                $color-accent, true
+            );
 
             .user-photo {
-                @include user-photo($color-accent);
+                @include user-photo($color-accent, true);
             }
         }
     }
@@ -14,6 +18,6 @@ header {
 
 section {
     &.advices {
-        @include advices($white, "../images/background-student2.webp", $dark-neutral);
+        @include advices($white, "../images/background-student2.webp", $dark-neutral, true);
     }
 }
